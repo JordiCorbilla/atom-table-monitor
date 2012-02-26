@@ -1,0 +1,1 @@
+ATOMScannerService.exe /uninstall
