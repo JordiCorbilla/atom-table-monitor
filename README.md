@@ -1,3 +1,5 @@
+Monitoring tool for global atom table and RegisterWindowMessage identifiers.
+==============
 "An atom table is a system-defined table that stores strings and corresponding identifiers. An application places a string in an atom table and receives a 16-bit integer, called an atom, that can be used to access the string. A string that has been placed in an atom table is called an atom name"
 --------------
 
