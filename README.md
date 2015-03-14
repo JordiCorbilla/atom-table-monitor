@@ -1,7 +1,7 @@
 "An atom table is a system-defined table that stores strings and corresponding identifiers. An application places a string in an atom table and receives a 16-bit integer, called an atom, that can be used to access the string. A string that has been placed in an atom table is called an atom name"
 --------------
 
-**Source**: http://msdn.microsoft.com/en-us/library/windows/desktop/ms649053(v=vs.85).aspx Microsoft - About Atom tables
+**Source**: [Microsoft - About Atom tables](http://msdn.microsoft.com/en-us/library/windows/desktop/ms649053(v=vs.85).aspx)
 
 With ATOM table Monitor, all created atoms using [RegisterClass](http://msdn.microsoft.com/en-us/library/windows/desktop/ms633586(v=vs.85).aspx), [RegisterClassEx](http://msdn.microsoft.com/en-us/library/windows/desktop/ms633587(v=vs.85).aspx), [GlobalAddAtom](http://msdn.microsoft.com/en-us/library/windows/desktop/ms649060(v=vs.85).aspx), [AddAtom](http://msdn.microsoft.com/en-us/library/windows/desktop/ms649056(v=vs.85).aspx) or identifiers from [RegisterWindowMessage](http://msdn.microsoft.com/en-us/library/windows/desktop/ms644947(v=vs.85).aspx) functions can be monitored and be sure our applications are not leaking Atoms / identifiers.
 
