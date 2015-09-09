@@ -7,8 +7,7 @@ Monitoring tool for global atom table and RegisterWindowMessage identifiers.
 
 With ATOM table Monitor, all created atoms using [RegisterClass](http://msdn.microsoft.com/en-us/library/windows/desktop/ms633586(v=vs.85).aspx), [RegisterClassEx](http://msdn.microsoft.com/en-us/library/windows/desktop/ms633587(v=vs.85).aspx), [GlobalAddAtom](http://msdn.microsoft.com/en-us/library/windows/desktop/ms649060(v=vs.85).aspx), [AddAtom](http://msdn.microsoft.com/en-us/library/windows/desktop/ms649056(v=vs.85).aspx) or identifiers from [RegisterWindowMessage](http://msdn.microsoft.com/en-us/library/windows/desktop/ms644947(v=vs.85).aspx) functions can be monitored and be sure our applications are not leaking Atoms / identifiers.
 
-Latest application can be downloaded here:
-**[ATOMTableMonitor v1.4](https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft)**
+[![Downloads](https://img.shields.io/badge/downloads-3k-blue.svg)](https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft) [![Stable Release](https://img.shields.io/badge/version-1.4-blue.svg)](https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft) [![License](https://img.shields.io/badge/license-BDS-blue.svg)](https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft) [![Delphi version](https://img.shields.io/badge/delphi-xe-red.svg)](https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft)
 
 **Related Articles:**
   - [Monitoring Global Atom table part I](http://thundaxsoftware.blogspot.com/2012/02/monitoring-global-atom-table-part-i.html)
