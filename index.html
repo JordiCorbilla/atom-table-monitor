@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Atom-table-monitor by JordiCorbilla</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Atom-table-monitor</h1>
+        <p>Monitoring tool for global atom table and RegisterWindowMessage identifiers</p>
+
+        <p class="view"><a href="https://github.com/JordiCorbilla/atom-table-monitor">View the Project on GitHub <small>JordiCorbilla/atom-table-monitor</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/JordiCorbilla/atom-table-monitor/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/JordiCorbilla/atom-table-monitor/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/JordiCorbilla/atom-table-monitor">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="monitoring-tool-for-global-atom-table-and-registerwindowmessage-identifiers" class="anchor" href="#monitoring-tool-for-global-atom-table-and-registerwindowmessage-identifiers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Monitoring tool for global atom table and RegisterWindowMessage identifiers.</h1>
+
+<h2>
+<a id="an-atom-table-is-a-system-defined-table-that-stores-strings-and-corresponding-identifiers-an-application-places-a-string-in-an-atom-table-and-receives-a-16-bit-integer-called-an-atom-that-can-be-used-to-access-the-string-a-string-that-has-been-placed-in-an-atom-table-is-called-an-atom-name" class="anchor" href="#an-atom-table-is-a-system-defined-table-that-stores-strings-and-corresponding-identifiers-an-application-places-a-string-in-an-atom-table-and-receives-a-16-bit-integer-called-an-atom-that-can-be-used-to-access-the-string-a-string-that-has-been-placed-in-an-atom-table-is-called-an-atom-name" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>"An atom table is a system-defined table that stores strings and corresponding identifiers. An application places a string in an atom table and receives a 16-bit integer, called an atom, that can be used to access the string. A string that has been placed in an atom table is called an atom name"</h2>
+
+<p><strong>Source</strong>: <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms649053(v=vs.85).aspx">Microsoft - About Atom tables</a></p>
+
+<p>With ATOM table Monitor, all created atoms using <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms633586(v=vs.85).aspx">RegisterClass</a>, <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms633587(v=vs.85).aspx">RegisterClassEx</a>, <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms649060(v=vs.85).aspx">GlobalAddAtom</a>, <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms649056(v=vs.85).aspx">AddAtom</a> or identifiers from <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms644947(v=vs.85).aspx">RegisterWindowMessage</a> functions can be monitored and be sure our applications are not leaking Atoms / identifiers.</p>
+
+<p><a href="https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft"><img src="https://img.shields.io/badge/downloads-3k-blue.svg" alt="Downloads"></a> <a href="https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft"><img src="https://img.shields.io/badge/version-1.4-blue.svg" alt="Stable Release"></a> <a href="https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft"><img src="https://img.shields.io/badge/license-BSD-blue.svg" alt="License"></a> <a href="https://app.box.com/s/tbmze7klz6j3astnviygwrgkdi4fu7ft"><img src="https://img.shields.io/badge/delphi-xe-red.svg" alt="Delphi version"></a></p>
+
+<p><strong>Related Articles:</strong></p>
+
+<ul>
+<li><a href="http://thundaxsoftware.blogspot.com/2012/02/monitoring-global-atom-table-part-i.html">Monitoring Global Atom table part I</a></li>
+<li><a href="http://thundaxsoftware.blogspot.com/2012/02/monitoring-global-atom-table-part-ii.html">Monitoring Global Atom table part II</a></li>
+<li><a href="http://thundaxsoftware.blogspot.com/2012/02/monitoring-global-atom-table-part-iii.html">Monitoring Global Atom table part III</a></li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li>Monitor Global atom entries from 0xC000 to 0xFFFF using <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms649063(v=vs.85).aspx">GlobalGetAtomName</a>.</li>
+<li>Monitor RegisterWindowMessage atom entries (identifiers) from 0xC000 to 0xFFF using <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms649040(v=vs.85).aspx">GetClipboardFormatName</a>.</li>
+<li>Memory displayed in a nice way using a memory grid.</li>
+<li>Match pattern using regular expressions.</li>
+<li>Graph displaying current values.</li>
+<li>Testing table entries using GlobalAddAtom and RegisterWindowMessage functions.</li>
+<li>Monitoring user session atoms and Service session atoms.</li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+<li>It uses <strong>C:\</strong> drive for internal use as it is hard-coded. (Be sure you have that drive in your system)</li>
+</ul>
+
+<p><strong>Global atom table:</strong>
+<img src="http://4.bp.blogspot.com/-D6tRXUP7M0M/T0LAwZpBEWI/AAAAAAAAC5s/DxauJez7r3M/s1600/monitor1.jpg" alt="">
+<strong>RegisterWindowMessage table:</strong>
+<img src="http://4.bp.blogspot.com/-Ra7SgHtpfEk/T0LAyP_Tm4I/AAAAAAAAC50/t2P3rgKyNzw/s1600/monitor2.jpg" alt="">
+<strong>Display list of entries:</strong>
+<img src="http://2.bp.blogspot.com/--MXjyf2Uy64/T0LA0mwkGrI/AAAAAAAAC58/lQjr1O8WVNo/s1600/monitor3.jpg" alt="">
+<strong>Matching string patterns:</strong>
+<img src="http://4.bp.blogspot.com/-o8E5rBf5s4Y/T0LA2JJj0pI/AAAAAAAAC6E/jId5MN2Yq8U/s1600/monitor4.jpg" alt="">
+<strong>Counters:</strong>
+<img src="http://1.bp.blogspot.com/-0w8YllG0ahk/T0LA3k-j-zI/AAAAAAAAC6M/YuVWBHP_eWc/s1600/monitor5.jpg" alt="">
+<strong>Test screen:</strong>
+<img src="http://2.bp.blogspot.com/-78qn1E24k1g/T0LA4_FeFvI/AAAAAAAAC6U/jAihiSGuF4Y/s1600/monitor6.jpg" alt="">
+<strong>Session screen selection:</strong>
+<img src="http://3.bp.blogspot.com/-wMA0s0HxjXI/T0k1SI7ENjI/AAAAAAAAC6s/26_L_TuX8Ec/s1600/v1.4Service.png" alt="">
+<strong>Monitoring Service session atoms:</strong>
+<img src="http://3.bp.blogspot.com/-RIsOXSEw4BU/T0k3K7DJ5tI/AAAAAAAAC60/ehV0fBX2RQ0/s1600/v1.4RWM.png" alt=""></p>
+
+<p><strong>Scan Atoms method:</strong></p>
+
+<div class="highlight highlight-source-pascal"><pre><span class="pl-k">procedure</span> <span class="pl-en">ScanAtoms</span>;
+<span class="pl-k">var</span>
+  i: word;
+  cstrAtomName: <span class="pl-k">array</span> [<span class="pl-c1">0</span> .. <span class="pl-c1">1024</span>] <span class="pl-k">of</span> char;
+  cstrRWMName: <span class="pl-k">array</span> [<span class="pl-c1">0</span> .. <span class="pl-c1">1024</span>] <span class="pl-k">of</span> char;
+  AtomName, RWMName: string;
+  len, lenRWM: integer;
+  <span class="pl-k">Value</span>: string;
+  countAtom, countRWM: integer;
+<span class="pl-k">begin</span>
+  countAtom := <span class="pl-c1">0</span>;
+  countRWM := <span class="pl-c1">0</span>;
+  <span class="pl-k">for</span> i := $C000 <span class="pl-k">to</span> $FFFF <span class="pl-k">do</span>
+  <span class="pl-k">begin</span>
+    <span class="pl-k">Value</span> := <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;
+    len := GlobalGetAtomName(i, cstrAtomName, <span class="pl-c1">1024</span>);
+    lenRWM := GetClipboardFormatName(i, cstrRWMName, <span class="pl-c1">1024</span>);
+    <span class="pl-k">if</span> len &gt; <span class="pl-c1">0</span> <span class="pl-k">then</span>
+    <span class="pl-k">begin</span>
+      AtomName := StrPas(cstrAtomName);
+      SetLength(AtomName, len);
+      <span class="pl-k">Value</span> := AtomName;
+      Inc(countAtom);
+      FATomTable[i - $C000].atom[<span class="pl-c1">0</span>] := <span class="pl-k">Value</span> + <span class="pl-s"><span class="pl-pds">'</span>  --GlobalAtom<span class="pl-pds">'</span></span>;
+    <span class="pl-k">end</span>;
+    <span class="pl-k">if</span> lenRWM &gt; <span class="pl-c1">0</span> <span class="pl-k">then</span>
+    <span class="pl-k">begin</span>
+      RWMName := StrPas(cstrRWMName);
+      SetLength(RWMName, lenRWM);
+      <span class="pl-k">Value</span> := RWMName;
+      Inc(countRWM);
+      FATomTable[i - $C000].atom[<span class="pl-c1">1</span>] := <span class="pl-k">Value</span> + <span class="pl-s"><span class="pl-pds">'</span>  --RWM<span class="pl-pds">'</span></span>;
+    <span class="pl-k">end</span>;
+  <span class="pl-k">end</span>;
+<span class="pl-k">end</span>;</pre></div>
+
+<p><strong>Using regular expressions:</strong></p>
+
+<div class="highlight highlight-source-pascal"><pre><span class="pl-k">function</span> <span class="pl-en">GetColor</span>(Text: string): TColor;
+  <span class="pl-k">var</span>
+    i: integer;
+    perl: TPerlRegEx;
+    res: TColor;
+  <span class="pl-k">begin</span>
+    res := clGray;
+    <span class="pl-k">for</span> i := <span class="pl-c1">0</span> <span class="pl-k">to</span> FListPatterns.count - <span class="pl-c1">1</span> <span class="pl-k">do</span>
+    <span class="pl-k">begin</span>
+      perl := TPerlRegEx.Create;
+      <span class="pl-k">try</span>
+        perl.RegEx := UTF8String(FListPatterns[i].RegularEx);
+        perl.Subject := UTF8String(Text);
+        <span class="pl-k">if</span> perl.Match <span class="pl-k">then</span>
+        <span class="pl-k">begin</span>
+          res := FListPatterns[i].color;
+          Break;
+        <span class="pl-k">end</span>;
+      <span class="pl-k">finally</span>
+        perl.Free;
+      <span class="pl-k">end</span>;
+    <span class="pl-k">end</span>;
+    result := res;
+  <span class="pl-k">end</span>;</pre></div>
+
+<p><strong>Testing:</strong></p>
+
+<div class="highlight highlight-source-pascal"><pre><span class="pl-k">procedure</span> <span class="pl-en">AddatomClick</span>(Sender: TObject);
+<span class="pl-k">var</span>
+  i: integer;
+<span class="pl-k">begin</span>
+  <span class="pl-k">try</span>
+    GlobalAddAtom(PChar(getRandomString(Edit4.Text)));
+    <span class="pl-k">if</span> GetLastError &lt;&gt; <span class="pl-c1">0</span> <span class="pl-k">then</span>
+    <span class="pl-k">begin</span>
+      ShowMessage(IntToStr(GetLastError) + <span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span> + SysErrorMessage(GetLastError));
+      Break;
+    <span class="pl-k">end</span>;
+  <span class="pl-k">Except</span>
+    on e: exception <span class="pl-k">do</span>
+      ShowMessage(e.message + <span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span> + IntToStr(GetLastError));
+  <span class="pl-k">end</span>;
+<span class="pl-k">end</span>;
+
+<span class="pl-k">procedure</span> <span class="pl-en">RWMAddAtom</span>(Sender: TObject);
+<span class="pl-k">var</span>
+  i: integer;
+  myString: string;
+<span class="pl-k">begin</span>
+  myString := getRandomString(Edit8.Text);
+  <span class="pl-k">try</span>
+    RegisterWindowMessage(PWideChar(myString));
+    <span class="pl-k">if</span> GetLastError &lt;&gt; <span class="pl-c1">0</span> <span class="pl-k">then</span>
+    <span class="pl-k">begin</span>
+      ShowMessage(IntToStr(GetLastError) + <span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span> + SysErrorMessage(GetLastError));
+      Break;
+    <span class="pl-k">end</span>;
+  <span class="pl-k">Except</span>
+    on e: exception <span class="pl-k">do</span>
+      ShowMessage(e.message + <span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span> + IntToStr(GetLastError));
+  <span class="pl-k">end</span>;
+<span class="pl-k">end</span>;
+
+<span class="pl-k">function</span> <span class="pl-en">getRandomString</span>(header: string): string;
+<span class="pl-k">const</span>
+  Chars = <span class="pl-s"><span class="pl-pds">'</span>1234567890ABCDEFGHJKLMNPQRSTUVWXYZ!?/*+-<span class="pl-pds">'</span></span>;
+<span class="pl-k">var</span>
+  S: string;
+  i, N: integer;
+<span class="pl-k">begin</span>
+  Randomize;
+  S := <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;
+  <span class="pl-k">for</span> i := <span class="pl-c1">1</span> <span class="pl-k">to</span> <span class="pl-c1">6</span> <span class="pl-k">do</span>
+  <span class="pl-k">begin</span>
+    N := Random(Length(Chars)) + <span class="pl-c1">1</span>;
+    S := S + Chars[N];
+  <span class="pl-k">end</span>;
+  result := header + S;
+<span class="pl-k">end</span>;</pre></div>
+
+<p><strong>Testing using RegisterClassEx</strong></p>
+
+<div class="highlight highlight-source-pascal"><pre><span class="pl-k">procedure</span> <span class="pl-en">btnCreateClick</span>(Sender: TObject);
+<span class="pl-k">var</span>
+  WC: TWndclassEx;
+  atom: word;
+<span class="pl-k">begin</span>
+  WC.lpszclassName := PWideChar(Edit10.Text);
+  WC.cbSize := SizeOf(TWndclassEx);
+  WC.style := CS_VREDRAW <span class="pl-k">or</span> CS_HREDRAW;
+  WC.lpfnWndProc := @DefWindowProc;
+  WC.cbClsExtra := <span class="pl-c1">0</span>;
+  WC.cbWndExtra := <span class="pl-c1">0</span>;
+  WC.hinstance := hinstance;
+  WC.hIcon := Application.Icon.Handle;
+  WC.hIconSm := Application.Icon.Handle;
+  WC.hCursor := LoadCursor(<span class="pl-c1">0</span>, IDC_ARROW);
+  WC.lpszMenuName := <span class="pl-k">nil</span>;
+  WC.hbrBackground := (COLOR_BACKGROUND + <span class="pl-c1">1</span>);
+
+  atom := RegisterClassEx(WC);
+  <span class="pl-k">if</span> atom &lt;&gt; <span class="pl-c1">0</span> <span class="pl-k">then</span>
+    ShowMessage(<span class="pl-s"><span class="pl-pds">'</span>Atom Created at <span class="pl-pds">'</span></span> + IntToHex(atom, <span class="pl-c1">4</span>));
+<span class="pl-k">end</span>;</pre></div>
+
+<p><strong>Tested under:</strong></p>
+
+<ul>
+<li>Windows Xp, Vista, 7, Server 2003, Server 2008</li>
+</ul>
+
+<p><strong>Developed under:</strong></p>
+
+<ul>
+<li>Delphi 2010</li>
+</ul>
+
+<p><strong>StackOverflow entry:</strong></p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/507853/system-error-code-8-not-enough-storage-is-available-to-process-this-command/9066509#9066509">System Error. Code: 8. Not enough storage is available to process this command</a></li>
+</ul>
+
+<p><strong>Microsoft Debug Blog entry:</strong></p>
+
+<ul>
+<li>
+<a href="http://blogs.msdn.com/b/ntdebugging/archive/2012/01/31/identifying-global-atom-table-leaks.aspx">Identifying global atom table leaks</a>.</li>
+</ul>
+
+<h2>
+<a id="sponsors" class="anchor" href="#sponsors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sponsors</h2>
+
+<p>No sponsors yet! Will you be the first?</p>
+
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=L5FCF6LX5C9AW" title="Donate once-off to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPayl donate button"></a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/JordiCorbilla">JordiCorbilla</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
