@@ -198,7 +198,7 @@ end;
 ```
 
 **Tested under:**
-  - Windows Xp, Vista, 7, Server 2003, Server 2008
+  - Windows Xp, Vista, 7, Server 2003, Server 2008, Windows 10
 
 **Developed under:**
   - Delphi 2010
