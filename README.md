@@ -22,11 +22,16 @@ With ATOM table Monitor, all created atoms using [RegisterClass](http://msdn.mic
   - Graph displaying current values.
   - Testing table entries using GlobalAddAtom and RegisterWindowMessage functions.
   - Monitoring user session atoms and Service session atoms.
+  - Windows 10 support.
 
 **Notes:**
   - It uses **C:\** drive for internal use as it is hard-coded. (Be sure you have that drive in your system)
 
 **Global atom table:**
+Latest version: 1.5
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/newversion.png)
+
+Version 1.4:
 ![](http://4.bp.blogspot.com/-D6tRXUP7M0M/T0LAwZpBEWI/AAAAAAAAC5s/DxauJez7r3M/s1600/monitor1.jpg)
 **RegisterWindowMessage table:**
 ![](http://4.bp.blogspot.com/-Ra7SgHtpfEk/T0LAyP_Tm4I/AAAAAAAAC50/t2P3rgKyNzw/s1600/monitor2.jpg)
