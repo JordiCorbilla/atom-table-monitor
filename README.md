@@ -27,24 +27,21 @@ With ATOM table Monitor, all created atoms using [RegisterClass](http://msdn.mic
 **Notes:**
   - It uses **C:\** drive for internal use as it is hard-coded. (Be sure you have that drive in your system)
 
+Version 1.6:
 **Global atom table:**
-Latest version: 1.5
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/newversion.png)
-
-Version 1.4:
-![](http://4.bp.blogspot.com/-D6tRXUP7M0M/T0LAwZpBEWI/AAAAAAAAC5s/DxauJez7r3M/s1600/monitor1.jpg)
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/globalatom.png)
 **RegisterWindowMessage table:**
-![](http://4.bp.blogspot.com/-Ra7SgHtpfEk/T0LAyP_Tm4I/AAAAAAAAC50/t2P3rgKyNzw/s1600/monitor2.jpg)
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/rwm.png)
 **Display list of entries:**
-![](http://2.bp.blogspot.com/--MXjyf2Uy64/T0LA0mwkGrI/AAAAAAAAC58/lQjr1O8WVNo/s1600/monitor3.jpg)
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/listentries.png)
 **Matching string patterns:**
-![](http://4.bp.blogspot.com/-o8E5rBf5s4Y/T0LA2JJj0pI/AAAAAAAAC6E/jId5MN2Yq8U/s1600/monitor4.jpg)
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/stringpattern.png)
 **Counters:**
-![](http://1.bp.blogspot.com/-0w8YllG0ahk/T0LA3k-j-zI/AAAAAAAAC6M/YuVWBHP_eWc/s1600/monitor5.jpg)
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/counters.png)
 **Test screen:**
-![](http://2.bp.blogspot.com/-78qn1E24k1g/T0LA4_FeFvI/AAAAAAAAC6U/jAihiSGuF4Y/s1600/monitor6.jpg)
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/testscreen.png)
 **Session screen selection:**
-![](http://3.bp.blogspot.com/-wMA0s0HxjXI/T0k1SI7ENjI/AAAAAAAAC6s/26_L_TuX8Ec/s1600/v1.4Service.png)
+![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/session.png)
 **Monitoring Service session atoms:**
 ![](http://3.bp.blogspot.com/-RIsOXSEw4BU/T0k3K7DJ5tI/AAAAAAAAC60/ehV0fBX2RQ0/s1600/v1.4RWM.png)
 
