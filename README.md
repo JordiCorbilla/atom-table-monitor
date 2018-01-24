@@ -28,6 +28,7 @@ With ATOM table Monitor, all created atoms using [RegisterClass](http://msdn.mic
   - It uses **C:\** drive for internal use as it is hard-coded. (Be sure you have that drive in your system)
 
 Version 1.6:
+
 **Global atom table:**
 ![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/globalatom.png)
 **RegisterWindowMessage table:**
