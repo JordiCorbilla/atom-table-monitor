@@ -1,5 +1,5 @@
 (*
-  Copyright (c) 2012, Jordi Corbilla
+  Copyright (c) 2018, Jordi Corbilla
   All rights reserved.
 
   Redistribution and use in source and binary forms, with or without
