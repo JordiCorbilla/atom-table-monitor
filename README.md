@@ -205,7 +205,7 @@ end;
   - [System Error. Code: 8. Not enough storage is available to process this command](http://stackoverflow.com/questions/507853/system-error-code-8-not-enough-storage-is-available-to-process-this-command/9066509#9066509)
 
 **Microsoft Debug Blog entry:**
-  - [Identifying global atom table leaks](http://blogs.msdn.com/b/ntdebugging/archive/2012/01/31/identifying-global-atom-table-leaks.aspx).
+  - [Identifying global atom table leaks](https://docs.microsoft.com/en-us/archive/blogs/ntdebugging/identifying-global-atom-table-leaks).
 
 ## Sponsors
 No sponsors yet! Will you be the first?
