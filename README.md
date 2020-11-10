@@ -30,19 +30,19 @@ With ATOM table Monitor, all created atoms using [RegisterClass](http://msdn.mic
 Version 1.6:
 
 **Global atom table:**
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/globalatom.png)
+![](globalatom.png)
 **RegisterWindowMessage table:**
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/rwm.png)
+![](rwm.png)
 **Display list of entries:**
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/listentries.png)
+![](listentries.png)
 **Matching string patterns:**
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/stringpattern.png)
+![](stringpattern.png)
 **Counters:**
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/counters.png)
+![](counters.png)
 **Test screen:**
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/testscreen.png)
+![](testscreen.png)
 **Session screen selection:**
-![](https://github.com/JordiCorbilla/atom-table-monitor/raw/master/session.png)
+![](session.png)
 **Monitoring Service session atoms:**
 ![](http://3.bp.blogspot.com/-RIsOXSEw4BU/T0k3K7DJ5tI/AAAAAAAAC60/ehV0fBX2RQ0/s1600/v1.4RWM.png)
 
